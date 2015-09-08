@@ -1,0 +1,19 @@
+{
+  "name": "bf-search",
+  "version": "1.0.0",
+  "description": "Simple proof of concept searching accroess product attributes and categories",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taco/bf-search.git"
+  },
+  "author": "Taco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taco/bf-search/issues"
+  },
+  "homepage": "https://github.com/taco/bf-search#readme"
+}
