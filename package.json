@@ -4,7 +4,7 @@
   "description": "Simple proof of concept searching accroess product attributes and categories",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./node_modules/babel/bin/babel-node index"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/taco/bf-search/issues"
   },
-  "homepage": "https://github.com/taco/bf-search#readme"
+  "homepage": "https://github.com/taco/bf-search#readme",
+  "devDependencies": {
+    "babel": "^5.8.23"
+  }
 }
