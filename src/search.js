@@ -2,6 +2,10 @@ import colors from './data/colors.json'
 import designers from './data/designers.json'
 import categories from './data/categories.json'
 
+const COLOR_MAP = buildAttributeMap(colors)
+const DESIGNER_MAP = buildAttributeMap(designers)
+const CATEGORY_MAP = buildCategoryMap()
+
 export default function (query) {
     var words = query.toLowerCase().split(' ')
 
@@ -63,7 +67,7 @@ function remainder(words, startIndex, endIndex) {
 }
 
 function searchAttributes(value) {
-    var designer = designers.items.find(d => d.name.toLowerCase() === value)
+    var designer = DESIGNER_MAP.get(value)
 
     if (designer) {
         return {
@@ -73,7 +77,7 @@ function searchAttributes(value) {
         }
     }
 
-    var color = colors.items.find(c => c.name.toLowerCase() === value)
+    var color = COLOR_MAP.get(value)
 
     if (color) {
         return {
@@ -83,7 +87,7 @@ function searchAttributes(value) {
         }
     }
 
-    var category = categories.find(c => c.name.toLowerCase().indexOf(value) > -1)
+    var category = CATEGORY_MAP.get(value)
 
     if (category) {
         return {
@@ -91,4 +95,16 @@ function searchAttributes(value) {
             category
         }
     }
+}
+
+function buildAttributeMap(attributes) {
+    var map = new Map()
+    attributes.items.forEach(a => map.set(a.name.toLowerCase(), a))
+    return map
+} 
+
+function buildCategoryMap() {
+    var map = new Map()
+    categories.forEach(c => map.set(c.name.toLowerCase(), c))
+    return map
 }
