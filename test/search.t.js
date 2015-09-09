@@ -8,7 +8,7 @@ describe('Search ', function() {
 })
 
 describe('Searching "blue"', function() {
-    var result = search('blue')
+    var result = search({query: 'blue'}, {})
     var {filters: [{searchType, typeId, attributeValue: {name}}]} = result
 
     it('should return one filter', function() {
