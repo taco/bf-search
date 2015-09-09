@@ -1,0 +1,17 @@
+{
+    "id": "tenant~brand",
+    "name": "designers",
+    "items": [{
+        "id": 5001,
+        "name": "Calvin Klein",
+        "slug": "calvin+klein"
+    }, {
+        "id": 5002,
+        "name": "Ash",
+        "slug": "ash"
+    }, {
+        "id": 5003,
+        "name": "Wyatt",
+        "slug": "wyatt"
+    }]
+}

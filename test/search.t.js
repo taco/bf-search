@@ -6,3 +6,21 @@ describe('Search ', function() {
         assert.equal(typeof search, 'function')
     })
 })
+
+describe('Searching "blue"', function() {
+    var result = search('blue')
+    var {filters: [{searchType, typeId, attributeValue: {name}}]} = result
+
+    it('should return one filter', function() {
+        assert.equal(result.filters.length, 1)
+    })
+
+    it('should return an attribute type', function() {
+        assert.equal(searchType, 'attribute')
+    })
+
+    it('should return an filter of the color blue', function () {
+        assert.equal(typeId, 'tenant~color')
+        assert.equal(name, 'Blue')
+    })
+})

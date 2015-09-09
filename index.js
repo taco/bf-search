@@ -1,3 +1,1 @@
-import search from './src/search'
-
-console.log(search())
+console.log('Run "npm test" to do something interesting')

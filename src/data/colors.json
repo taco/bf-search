@@ -1,0 +1,17 @@
+{
+    "id": "tenant~color",
+    "name": "colors",
+    "items": [{
+        "id": 3001,
+        "name": "Red",
+        "slug": "red"
+    }, {
+        "id": 3002,
+        "name": "Blue",
+        "slug": "blue"
+    }, {
+        "id": 3003,
+        "name": "Green",
+        "slug": "green"
+    }]
+}
