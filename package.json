@@ -1,7 +1,7 @@
 {
   "name": "bf-search",
   "version": "1.0.0",
-  "description": "Simple proof of concept searching accroess product attributes and categories",
+  "description": "Simple proof of concept searching across product attributes and categories",
   "main": "index.js",
   "watch": {
     "test": "{src,test}/*.js"
